@@ -1,0 +1,9 @@
+// config.ts
+export const APP_CONFIG = {
+    appName: "Client WebApp",
+    url: "https://example.com", // client website
+    themeColor: "#0066cc",
+    splash: require("./assets/splash.gif"),
+    icon: require("./assets/icon.png"),
+    notifications: true // toggle push notifications
+};

@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Expo-Webview-Wrapper",
-    "slug": "Expo-Webview-Wrapper",
+    "name": "CloudSPX",
+    "slug": "cloudspx",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "expowebviewwrapper",
+    "icon": "./assets/images/spx-ico.png",
+    "scheme": "cloudspx",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -13,30 +13,31 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/spx-ico.png",
+        "backgroundColor": "#cc6d00"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.cloudspx.app"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/spx-ico.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "url": "https://stage.cloudspx.io/auth/login"
     }
   }
 }
