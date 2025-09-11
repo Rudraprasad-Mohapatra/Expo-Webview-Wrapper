@@ -4,7 +4,7 @@
     "slug": "cloudspx",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/spx-ico.png",
+    "icon": "./assets/images/CloudspxAppIcon.png",
     "scheme": "cloudspx",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/spx-ico.png",
+        "foregroundImage": "./assets/images/CloudspxAppIcon.png",
         "backgroundColor": "#cc6d00"
       },
       "edgeToEdgeEnabled": true,
@@ -22,14 +22,16 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/spx-ico.png"
+      "favicon": "./assets/images/CloudspxAppIcon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#ffffff"
+      "image": "assets/images/CloudspxSplashScreen.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
         }
       ]
     ],
