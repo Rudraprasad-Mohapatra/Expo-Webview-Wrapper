@@ -1,10 +1,12 @@
+import Constants from "expo-constants";
+import { Image } from "expo-image";
 import React, { useEffect } from "react";
-import { Image, StyleSheet, View } from "react-native";
-import { APP_CONFIG } from "../config";
+import { StyleSheet, View } from "react-native";
 
 type Props = { onFinish: () => void };
 
 export default function SplashScreenComponent({ onFinish }: Props) {
+    const { expoConfig } = Constants;
     useEffect(() => {
         const timer = setTimeout(() => onFinish(), 3000); // auto-hide after 3s
         return () => clearTimeout(timer);
@@ -12,16 +14,29 @@ export default function SplashScreenComponent({ onFinish }: Props) {
 
     return (
         <View style={styles.container}>
-            <Image
-                source={APP_CONFIG.splash}
-                style={styles.image}
-                resizeMode="contain"
-            />
+            <View style={styles.loadingContainer}>
+                <Image
+                    source={require("../assets/gif/WebViewLoader.gif")}
+                    style={styles.loadingGif}
+                />
+            </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#fff" },
-    image: { width: 250, height: 250 },
+    container: {
+        flex: 1,
+        backgroundColor: "#fff",
+    },
+    loadingContainer: {
+        ...StyleSheet.absoluteFillObject, // ✅ fills the screen
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#fff", // optional background
+    },
+    loadingGif: {
+        width: 120,
+        height: 120,
+    },
 });

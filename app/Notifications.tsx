@@ -1,7 +1,7 @@
 import * as Notifications from "expo-notifications";
 import { useEffect, useRef } from "react";
 
-// Configure notifications behavior
+// (Notification handler setup remains the same)
 Notifications.setNotificationHandler({
     handleNotification: async () => ({
         shouldShowAlert: true,
@@ -11,11 +11,10 @@ Notifications.setNotificationHandler({
 });
 
 export default function NotificationsHandler() {
-    const notificationListener = useRef<any>();
-    const responseListener = useRef<any>();
+    const notificationListener = useRef();
+    const responseListener = useRef();
 
     useEffect(() => {
-        // Request permissions
         (async () => {
             const { status } = await Notifications.requestPermissionsAsync();
             if (status !== "granted") {
@@ -23,21 +22,21 @@ export default function NotificationsHandler() {
             }
         })();
 
-        // Foreground notifications
+        // Add listeners and save the subscription object
         notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
             console.log("Received notification:", notification);
         });
 
-        // When user taps on notification
         responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
             console.log("Notification tapped:", response);
         });
 
+        // Remove subscriptions on unmount using `.remove()`
         return () => {
-            Notifications.removeNotificationSubscription(notificationListener.current);
-            Notifications.removeNotificationSubscription(responseListener.current);
+            notificationListener.current && notificationListener.current.remove();
+            responseListener.current && responseListener.current.remove();
         };
     }, []);
 
-    return null; // invisible component
+    return null;
 }

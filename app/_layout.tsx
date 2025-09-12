@@ -1,14 +1,15 @@
+import Constants from "expo-constants";
 import { Slot } from "expo-router";
 import React from "react";
 import { SafeAreaView, StatusBar, StyleSheet } from "react-native";
-import { APP_CONFIG } from "../config";
 import Notifications from "./Notifications";
 
 export default function RootLayout() {
+  const { expoConfig } = Constants;
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor={APP_CONFIG.themeColor} />
-      {APP_CONFIG.notifications && <Notifications />}
+      <StatusBar barStyle="dark-content" backgroundColor={expoConfig?.extra?.themeColor} />
+      {expoConfig?.extra?.notifications && <Notifications />}
       <Slot />
     </SafeAreaView>
   );

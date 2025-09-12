@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Expo-Webview-Wrapper",
-    "slug": "Expo-Webview-Wrapper",
+    "name": "Appname",
+    "slug": "appname",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "expowebviewwrapper",
+    "icon": "./assets/images/AppIcon.png",
+    "scheme": "appname",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -13,30 +13,36 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/AppIcon.png",
+        "backgroundColor": "#cc6d00"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.appname.app"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/AppIcon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
+          "image": "assets/images/AppIcon.png",
           "backgroundColor": "#ffffff"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "url": "your-url",
+      "webViewLoaderPath": "../assets/gif/AppLoader.gif",
+      "appIconPath": "../assets/images/AppIcon.png",
+      "themeColor": "#cc6d00ff",
+      "notifications": false
     }
   }
 }

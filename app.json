@@ -4,7 +4,7 @@
     "slug": "cloudspx",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/CloudspxAppIcon.png",
+    "icon": "./assets/images/AppIcon.png",
     "scheme": "cloudspx",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/CloudspxAppIcon.png",
+        "foregroundImage": "./assets/images/AppIcon.png",
         "backgroundColor": "#cc6d00"
       },
       "edgeToEdgeEnabled": true,
@@ -22,16 +22,15 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/CloudspxAppIcon.png"
+      "favicon": "./assets/images/AppIcon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-      "image": "assets/images/CloudspxSplashScreen.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+          "image": "assets/images/AppIcon.png",
+          "backgroundColor": "#ffffff"
         }
       ]
     ],
@@ -39,7 +38,11 @@
       "typedRoutes": true
     },
     "extra": {
-      "url": "https://stage.cloudspx.io/auth/login"
+      "url": "https://cloudspx.io/auth/login",
+      "webViewLoaderPath": "../assets/gif/WebViewLoader.gif",
+      "appIconPath": "../assets/images/AppIcon.png",
+      "themeColor": "#cc6d00ff",
+      "notifications": false
     }
   }
 }

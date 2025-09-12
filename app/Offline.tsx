@@ -1,11 +1,14 @@
+import Constants from "expo-constants";
+import { Image } from "expo-image";
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Offline() {
+    const { expoConfig } = Constants;
     return (
         <View style={styles.container}>
             <Image
-                source={{ uri: "https://cdn-icons-png.flaticon.com/512/2748/2748558.png" }}
+                source={expoConfig?.extra?.appIconPath}
                 style={styles.icon}
             />
             <Text style={styles.text}>No Internet Connection</Text>
