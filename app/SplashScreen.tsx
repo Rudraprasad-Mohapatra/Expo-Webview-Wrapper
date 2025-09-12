@@ -16,7 +16,7 @@ export default function SplashScreenComponent({ onFinish }: Props) {
         <View style={styles.container}>
             <View style={styles.loadingContainer}>
                 <Image
-                    source={require("../assets/gif/WebViewLoader.gif")}
+                    source={require("../assets/gif/webviewloader.gif")}
                     style={styles.loadingGif}
                 />
             </View>

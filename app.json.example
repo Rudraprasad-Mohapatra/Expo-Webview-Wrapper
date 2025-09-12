@@ -4,7 +4,7 @@
     "slug": "appname",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/AppIcon.png",
+    "icon": "./assets/images/appicon.png",
     "scheme": "appname",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/AppIcon.png",
+        "foregroundImage": "./assets/images/appicon.png",
         "backgroundColor": "#cc6d00"
       },
       "edgeToEdgeEnabled": true,
@@ -22,14 +22,14 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/AppIcon.png"
+      "favicon": "./assets/images/appicon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "assets/images/AppIcon.png",
+          "image": "assets/images/appicon.png",
           "backgroundColor": "#ffffff"
         }
       ]
@@ -39,8 +39,8 @@
     },
     "extra": {
       "url": "your-url",
-      "webViewLoaderPath": "../assets/gif/AppLoader.gif",
-      "appIconPath": "../assets/images/AppIcon.png",
+      "webviewloaderPath": "../assets/gif/AppLoader.gif",
+      "appiconPath": "../assets/images/appicon.png",
       "themeColor": "#cc6d00ff",
       "notifications": false
     }

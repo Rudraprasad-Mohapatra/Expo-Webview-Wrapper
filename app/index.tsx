@@ -51,7 +51,7 @@ export default function Home() {
                 renderLoading={() => (
                     <View style={styles.loadingContainer}>
                         <Image
-                            source={require("../assets/gif/WebViewLoader.gif")}
+                            source={require("../assets/gif/webviewloader.gif")}
                             style={styles.loadingGif}
                         />
                     </View>

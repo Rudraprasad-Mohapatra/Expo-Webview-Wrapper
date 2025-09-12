@@ -8,7 +8,7 @@ export default function Offline() {
     return (
         <View style={styles.container}>
             <Image
-                source={expoConfig?.extra?.appIconPath}
+                source={expoConfig?.extra?.appiconPath}
                 style={styles.icon}
             />
             <Text style={styles.text}>No Internet Connection</Text>
